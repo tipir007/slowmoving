@@ -1,0 +1,2 @@
+# slowmoving
+digitalisasi comp slowmoving
