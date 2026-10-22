@@ -1,0 +1,9 @@
+{
+  "name": "Rak Merah",
+  "short_name": "Rak Merah",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#efe6d4",
+  "theme_color": "#1a1714",
+  "lang": "id"
+}

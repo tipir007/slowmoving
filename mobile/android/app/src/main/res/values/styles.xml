@@ -1,0 +1,11 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
+        <item name="android:textColor">#1a1714</item>
+        <item name="android:textColorPrimary">#1a1714</item>
+        <item name="android:textColorSecondary">#4a453c</item>
+        <item name="android:textColorHint">#6b6558</item>
+        <item name="android:windowBackground">#efe6d4</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

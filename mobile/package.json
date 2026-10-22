@@ -1,0 +1,57 @@
+{
+  "name": "com.rakmerah",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "lint": "eslint .",
+    "start": "react-native start",
+    "test": "jest",
+    "studio": "echo Open Android Studio at mobile/android"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-navigation/bottom-tabs": "^7.19.2",
+    "@react-navigation/native": "^7.4.1",
+    "@react-navigation/native-stack": "^7.19.2",
+    "@supabase/supabase-js": "^2.116.0",
+    "react": "18.3.1",
+    "react-native": "0.76.6",
+    "react-native-fs": "^2.20.0",
+    "react-native-gesture-handler": "^2.20.2",
+    "react-native-image-picker": "^8.2.1",
+    "react-native-qrcode-svg": "^6.3.24",
+    "react-native-safe-area-context": "^5.10.0",
+    "react-native-screens": "^4.9.0",
+    "react-native-svg": "15.12.1",
+    "react-native-url-polyfill": "^4.0.0",
+    "react-native-vision-camera": "^4.7.3",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native/babel-preset": "0.76.6",
+    "@react-native/eslint-config": "0.76.6",
+    "@react-native/metro-config": "0.76.6",
+    "@react-native/typescript-config": "0.76.6",
+    "@types/react": "^18.2.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.6.3",
+    "babel-plugin-module-resolver": "^5.0.3",
+    "eslint": "^8.19.0",
+    "jest": "^29.6.3",
+    "prettier": "2.8.8",
+    "react-native-dotenv": "^4.1.1",
+    "react-test-renderer": "18.3.1",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
