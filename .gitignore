@@ -37,3 +37,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.iml
+
+# data backups (local only)
+backup/

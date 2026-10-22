@@ -106,6 +106,30 @@ eq("dirty exp date only", dirty.expAt.value, "2026-10-10");
 eq("dirty mix + time", dirty.mixAt.value, "2026-09-19T07:26");
 eq("dirty emp", dirty.empId.value, "AA398822");
 
+const sif31Oct22 = `NON-PRODUCTIVE
+|LPCA LPCA LPCA
+793972004
+2026-10-22 02:47
+SPS: 3
+Emp: AA39822
+Da:o: 20:26-10-22 02:47
+Mixer: 4
+Crew:
+Exp:2026-11-12 02:4
+wSiF31
+793972
+Skid:
+Run:
+[01A6]
+ngONON
+SIF31
+Mixer Ticket`;
+const sif = fuseTicket([decodeBarcode("793972004")], sif31Oct22);
+eq("emp before compound: compound", sif.compound.value, "SIF31");
+eq("emp before compound: emp", sif.empId.value, "AA39822");
+eq("emp before compound: run", sif.runNo.value, "793972");
+eq("emp before compound: skid", sif.skidNo.value, "4");
+
 eq("dot time", parseMixerTicketText("Exp:2026-10-10 07.26").expAt, "2026-10-10T07:26");
 eq("wrap time", parseMixerTicketText("Exp:2026-10-10\n07:26").expAt, "2026-10-10T07:26");
 eq("date only no fake midnight", parseMixerTicketText("Exp:2026-10-10").expAt, "2026-10-10");

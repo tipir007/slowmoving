@@ -132,11 +132,12 @@ export function classifyDocument(text: string): DocumentType {
   return "UNKNOWN";
 }
 
-function pickCompound(upper: string) {
+/** Emp ID (AA39822) juga lolos pola compound; jangan pernah jadi compound. */
+function pickCompound(upper: string, empId?: string) {
   const labeled = pick(upper, /\bCOMPOUND\b[:\s#.-]*([A-Z0-9]{3,10})\b/);
-  if (labeled && !COMPOUND_DENY.test(labeled)) return labeled;
+  if (labeled && !COMPOUND_DENY.test(labeled) && labeled !== empId) return labeled;
   const matches = [...upper.matchAll(COMPOUND_TOKEN)].map((m) => m[1]);
-  return matches.find((c) => !COMPOUND_DENY.test(c));
+  return matches.find((c) => !COMPOUND_DENY.test(c) && c !== empId);
 }
 
 function labeledBlob(lines: string[], testers: RegExp[]) {
@@ -217,7 +218,7 @@ export function parseMixerTicketText(rawInput: string): ParsedTicket {
     mixAt = fb.mixAt;
   }
 
-  const compound = pickCompound(upper);
+  const compound = pickCompound(upper, empId);
 
   return {
     documentType: classifyDocument(raw),
